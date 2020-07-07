@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;/*隱藏滾動(scrool)*/
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*↓ main ↓*/
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+*{
+    box-sizing: border-box;
+  }
+
+
+
+
+body{
+      margin: 0;
+}
+/*↓ css3 animation ↓*/
+#div01{animation-timing-function: ease-in;/*ease-in(加速)*/
+       position: relative;
+       animation: mymove 1s 1;/*1s為動畫執行速度，1為動畫執行次數*/
+}
+@keyframes mymove{/*keyframes關鍵影格設定，若缺少關鍵影格設定，動畫就跑不起來*/
+  from{
+    margin-left: 100%;
+    width: 300%;
+}
+
+to{
+  margin-left: 0%;
+  width: 100%;
+ }
+}
+/*↑ css3 animation ↑*/
+.header{
+    background-color: gray;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+/*↓ menu ↓*/
+.header > ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.header > ul > li{
+  float: left;
+  width: 150px;
+  height: 65px;
+  line-height: 65px;
+  position: relative;
+  font-size:14px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;/*滑鼠游標屬性pointer*/
+}
+.header > ul >li:hover{
+  background: #d5d5d5;
+  border-radius: 5px;
+}
+ul.drop-menu{
+  position: absolute;
+  display: flex;
+  top:100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+  flex-direction: column
+}
+
+ul.drop-menu li:hover {
+  background: #606060;
+}
+ul.drop-menu li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop-menu li {
+  background: #666;
+  color: rgba(255, 255, 255, 0.7);
+  display: none;
+  animation-duration: 0.3s;/*第二層選單動畫執行時間300ms*/
+}
+
+/*第二層選單，為每個li套用動畫*/
+ul.drop-menu > li:nth-child(1) {
+  animation-name: an-li1;
+}
+ul.drop-menu > li:nth-child(2) {
+  animation-name: an-li2;
+}
+ul.drop-menu > li:nth-child(3) {
+  animation-name: an-li3;
+}
+ul.drop-menu > li:nth-child(4) {
+  animation-name: an-li4;
+}
+/*第二層選單動畫*/
+@keyframes an-li1{
+  0%{
+    transform: translateX(-100px);
+  }
+  100%{
+    transform: translate(0px);
+  }
+}
+@keyframes an-li2{
+  0%{
+    transform: translateX(-70px);
+  }
+  100%{
+    transform: translate(0px);
+  }
+}
+@keyframes an-li3{
+  0%{
+    transform: translateX(-40px);
+  }
+  100%{
+    transform: translate(0px);
+  }
+}
+@keyframes an-li4{
+  0%{
+    transform: translateX(-10px);
+  }
+  100%{
+    transform: translate(0px);
+  }
+}
+
+
+li:hover > ul.drop-menu li {
+  display: block;
+}
+/*↑ menu ↑*/
+.content{
+  z-index:-1;
+  position: relative;
+
+}
+.content .slides{
+  margin: auto;
+
+}
+
+.footer{
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+  position: fixed;
+  bottom: 0;
+}
+    

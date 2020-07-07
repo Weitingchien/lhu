@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="Project2.css" rel="stylesheet" type="text/css">
+    <title>Project1</title>
+</head>
+<body>
+
+ <div id="div01"class="header">
+    <ul>
+    <li>test1
+        <ul class="drop-menu">
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+        </ul>
+    </li>
+    <li>test2
+        <ul class="drop-menu">
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+        </ul>
+    </li>
+    <li>test3
+        <ul class="drop-menu">
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+        </ul>
+    </li>
+    <li>test4
+        <ul class="drop-menu">
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+        </ul>
+    </li>
+    </ul>
+ </div>
+
+ <div class="content" id="myDiv" data-aos="fade-up">
+     <img class="slides" src="https://picsum.photos/id/949/600/400">
+     <img class="slides" src="https://picsum.photos/id/972/600/400">
+     <img class="slides" src="https://picsum.photos/id/945/600/400">
+ </div>
+
+ <div class="footer">
+       <a>Copyright © 2020 by Ting</a>
+
+
+ </div>
+
+
+
+<script>
+    var myIndex = 0;/*宣告變數myIndex值為0*/
+    carousel();
+    
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000);    
+    }
+</script>
+<script>
+        AOS.init({
+            easing: 'fade-up',
+            duration: 2000/*轉場時間長度*/
+        });
+</script>
+
+</body>
+</html>
