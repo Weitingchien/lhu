@@ -99,8 +99,9 @@ to{
   padding: 0;
   margin: 0;
   display: inline-block;
-  background: #ddd;
+  background: #AAAAAA;
   border-radius: 5px;
+  vertical-align: middle;/*垂直置中*/
 }
 
 .header > ul > li{
@@ -124,14 +125,12 @@ ul.drop-menu{
   left: 0%;
   width: 100%;
   padding: 0;
-  flex-direction: column
+  flex-direction: column;
+  opacity: 0.9;
 }
 
 ul.drop-menu li:hover {
   background: #606060;
-}
-ul.drop-menu li:last-child {
-  border-radius: 0px 0px 5px 5px;
 }
 
 ul.drop-menu li {
@@ -187,7 +186,6 @@ ul.drop-menu > li:nth-child(4) {
     transform: translate(0px);
   }
 }
-
 
 li:hover > ul.drop-menu li {
   display: block;
