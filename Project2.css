@@ -54,22 +54,55 @@ table {
 }
 
 /*↓ main ↓*/
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
-
-*{
-    box-sizing: border-box;
-  }
-
-
-
 
 body{
       margin: 0;
 }
+
+#menu_control{
+  position: absolute;
+  z-index: -2;
+  opacity: 0;
+}
+
+.menu_btn{
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  z-index: 1;
+
+}
+
+.menu_btn > span{
+  opacity: 0;
+}
+.menu_btn::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 2px;
+  width: 36px;
+  background-color: #aaa;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 8px 0px #aaa,
+              0px -8px 0px #aaa;
+}
+nav{
+  width: 80%;
+  height: calc(100vh - 50px);
+  background-color: #fcc;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+
 /*↓ css3 animation ↓*/
 #div01{animation-timing-function: ease-in;/*ease-in(加速)*/
        position: relative;
@@ -92,6 +125,11 @@ to{
     height: 100px;
     line-height: 100px;
     text-align: center;
+    position: relative;
+    left: -100%;
+}
+#menu_control:checked ~ .header {
+  left: 0;
 }
 /*↓ menu ↓*/
 .header > ul{
@@ -209,5 +247,14 @@ li:hover > ul.drop-menu li {
   line-height: 50px;
   position: fixed;
   bottom: 0;
+}
+
+@media screen and (min-width:768px){
+  .menu_btn{
+     display: none; 
+  }
+  .header{
+    left:0;
+  }
 }
     
