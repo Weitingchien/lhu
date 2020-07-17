@@ -250,11 +250,42 @@ li:hover > ul.drop-menu li {
 }
 
 @media screen and (min-width:768px){
+
   .menu_btn{
      display: none; 
   }
+
   .header{
     left:0;
   }
+
+.content2{
+  display: flex;
+  width: 100%;
+  height: 419px;
+  margin: 50px,auto;
+  bottom: 0%;
+  background-color: rgb(245, 228, 206);
+  }
+
+
+.pro{
+  flex: 1;
+}
+
+.product01{
+  width: 0%;
+  padding: 20px;
+}
+
+.product02{
+  width: 0%;
+  padding: 20px;
+}
+
+.product03{
+  width: 0%;
+  padding: 20px;
+}
 }
     
