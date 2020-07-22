@@ -59,6 +59,28 @@ body{
       margin: 0;
 }
 
+.logo01{
+  margin:0;
+  padding: 0;
+  max-width: 50px;
+  left:-100%;
+  position: relative;/*要在視窗縮小時從右邊滑入左邊消失，必須要加此屬性搭配left:-100%與底下screen內的left:0;才有作用*/
+}
+
+
+.logo01 img{
+  top: 10px;  
+  bottom: 0;  
+  left: 100px;  
+  float: left;
+  height: 60px;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+  
+}
+
+
 #menu_control{
   position: absolute;
   z-index: -2;
@@ -89,7 +111,7 @@ body{
   background-color: #aaa;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin:0 auto;
   box-shadow: 0px 8px 0px #aaa,
               0px -8px 0px #aaa;
 }
@@ -121,9 +143,10 @@ to{
 }
 /*↑ css3 animation ↑*/
 .header{
-    background-color: gray;
-    height: 100px;
-    line-height: 100px;
+    background-color: #343a40;
+    height: 80px;
+    width:100%;
+    line-height: 80px;
     text-align: center;
     position: relative;
     left: -100%;
@@ -134,11 +157,11 @@ to{
 /*↓ menu ↓*/
 .header > ul{
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0 auto;
   display: inline-block;
-  background: #AAAAAA;
-  border-radius: 5px;
+  background: #343a40;
+  border-radius: 10px;
   vertical-align: middle;/*垂直置中*/
 }
 
@@ -148,13 +171,14 @@ to{
   height: 65px;
   line-height: 65px;
   position: relative;
-  font-size:14px;
-  color: rgba(0, 0, 0, 0.7);
+  font-size:16px;
+  font-family: 'Open Sans', DFKai-sb, sans-serif;
+  color: white;
   cursor: pointer;/*滑鼠游標屬性pointer*/
 }
 .header > ul >li:hover{
-  background: #d5d5d5;
-  border-radius: 5px;
+  background: gray;
+  border-radius: 10px;
 }
 ul.drop-menu{
   position: absolute;
@@ -235,18 +259,52 @@ li:hover > ul.drop-menu li {
 
 }
 .content .slides{
-  margin: auto;
-
+  width: 100%;
 }
 
 .footer{
-  background-color: black;
+  background-color: #343a40;
   color: aliceblue;
-  text-align: center;
   width: 100%;
-  line-height: 50px;
-  position: fixed;
+  padding-top:400px;
   bottom: 0;
+  
+}
+
+/*footer第二個區塊*/
+.footer02{
+  height: 80px;
+}
+
+.by{
+  display:flex;
+  background-color: green;
+  height: 00px;
+  color: gray;
+  font-size: 2px;
+  margin-left:200px;
+  margin-top:40px ;
+  
+}
+
+.media_icon{
+  text-align: right;
+  margin-right: 200px;
+  margin-top: 5px; /*補個5px讓他看起來跟左邊等高*/
+}
+
+.icon01{
+  width: 30px;/*icon縮放*/
+  margin-top: -50px;
+  margin-left: 30px;
+  padding-left: 5px;
+  
+}
+
+
+
+.icon01:hover{
+  opacity: 0.5;
 }
 
 @media screen and (min-width:768px){
@@ -255,15 +313,20 @@ li:hover > ul.drop-menu li {
      display: none; 
   }
 
+  .logo01{
+    left:0;
+    
+  }
+
   .header{
     left:0;
   }
 
 .content2{
   display: flex;
-  height: 419px;
-  margin: 0 auto;
-  bottom: 0%;
+  margin: 50px;
+  
+ 
   background-color: rgb(245, 228, 206);
   }
 
@@ -274,16 +337,19 @@ li:hover > ul.drop-menu li {
 
 .product01{
   width: 0%;
+  margin:0 auto;
   padding: 20px;
 }
 
 .product02{
   width: 0%;
+  margin:0 auto;
   padding: 20px;
 }
 
 .product03{
   width: 0%;
+  margin:0 auto;
   padding: 20px;
 }
 }

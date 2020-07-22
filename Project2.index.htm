@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="Project2.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="logo01.png"/>
     <title>Project1</title>
 </head>
 <body>
     <!-- ↓RWD選單按鈕↓ -->
-    <input type="checkbox" name="" id="menu_control">
+    <input type="checkbox" name="" id="menu_control" class="menu_control">
 
   <label for="menu_control" class="menu_btn">
      <span>選單</span>
   </label>
     <!--↑RWD選單按鈕↑ -->
+
+    <!-- ↓LOGO↓ -->
+    <div class="logo01">
+        <img id="logo" src="logo01.png" alt="logo"/>
+    </div>
+    <!--↑LOGO↑ -->
+ 
  <div id="div01"class="header">
     <ul>
-    <li>test1
+    <li>介紹
         <ul class="drop-menu">
             <li>01</li>
             <li>02</li>
@@ -26,7 +35,7 @@
             <li>04</li>
         </ul>
     </li>
-    <li>test2
+    <li>相簿區
         <ul class="drop-menu">
             <li>10</li>
             <li>11</li>
@@ -34,7 +43,7 @@
             <li>13</li>
         </ul>
     </li>
-    <li>test3
+    <li>購物區
         <ul class="drop-menu">
             <li>22</li>
             <li>23</li>
@@ -42,7 +51,7 @@
             <li>25</li>
         </ul>
     </li>
-    <li>test4
+    <li>會員登入
         <ul class="drop-menu">
             <li>26</li>
             <li>27</li>
@@ -59,15 +68,24 @@
      <img class="slides" src="https://picsum.photos/id/945/600/400">
  </div>
 
- <div class="content2" data-aos="zoom-in"">
-    <img class="pro product01" src="https://fakeimg.pl/480x250/">
-    <img class="pro product02" src="https://fakeimg.pl/480x250/">
-    <img class="pro product03" src="https://fakeimg.pl/480x250/">
+ <div class="content2" data-aos="zoom-in">
+    <img class="pro product01" src="https://fakeimg.pl/400x250/">
+    <img class="pro product02" src="https://fakeimg.pl/400x250/">
+    <img class="pro product03" src="https://fakeimg.pl/400x250/">
 </div>
  <div class="footer">
-       <a>Copyright © 2020 by lhu e3</a>
-
-
+     <div class="footer02">
+    <hr>
+       <a class="by">© 2020 by lhu e3</a>
+        <!-- ↓icon↓ -->
+       <div class="media_icon">
+        <a href="Project2.index.htm"><img class="icon01" src="iconfinder_2018_social_media_popular_app_logo_youtube_3228540.svg"></a>
+        <a href="Project2.index.htm"><img class="icon01" src="iconfinder_2018_social_media_popular_app_logo_instagram_3228551.svg"></a>
+        <a href="Project2.index.htm"><img class="icon01" src="iconfinder_2018_social_media_popular_app_logo_facebook_3228552.svg"></a>
+        <a href="Project2.index.htm"><img class="icon01" src="iconfinder_2018_social_media_popular_app_logo_twitter_3228543.svg"></a>
+       </div>
+    </div>
+        <!--↑icon↑ -->
  </div>
 
 
@@ -91,7 +109,7 @@
 <script>
         AOS.init({
             easing: 'fade-up',
-            duration: 2000/*轉場時間長度*/
+            duration: 2500/*轉場時間長度*/
         });
 </script>
 
