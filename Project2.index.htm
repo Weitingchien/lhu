@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" rel="stylesheet">
     <link href="Project2.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="logo01.png"/>
     <title>Project1</title>
@@ -20,11 +19,12 @@
     <!--↑RWD選單按鈕↑ -->
 
     <!-- ↓LOGO↓ -->
-    <div class="logo01">
-        <img id="logo" src="logo01.png" alt="logo"/>
+    <div class="logo01 animate__animated animate__fadeInUp">
+        <a href="Project2.index.htm"><img id="logo" src="logo01.svg" alt="logo"/></a>
     </div>
     <!--↑LOGO↑ -->
- 
+
+ <!-- ↓視窗>=768px的menu↓ -->
  <div id="div01"class="header">
     <ul>
     <li>介紹
@@ -61,6 +61,47 @@
     </li>
     </ul>
  </div>
+ <!--↑視窗>=768px的menu↑ -->
+
+
+ <!-- ↓視窗<=767px的menu↓ -->
+<div id="div02" class="header02">
+    <ul>
+        <li>介紹
+            <ul class="drop-menu02">
+                <li><a href="#">01</a></li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+            </ul>
+        </li>
+        <li>相簿區
+            <ul class="drop-menu02">
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+            </ul>
+        </li>
+        <li>購物區
+            <ul class="drop-menu02">
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+            </ul>
+        </li>
+        <li>會員登入
+            <ul class="drop-menu02">
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+            </ul>
+        </li>
+        </ul>
+</div>
+ <!--↑視窗<=767px的menu↑ -->
 
  <div class="content" id="myDiv" data-aos="fade-up">
      <img class="slides" src="https://picsum.photos/id/949/600/400">
@@ -69,14 +110,48 @@
  </div>
 
  <div class="content2" data-aos="zoom-in">
-    <img class="pro product01" src="https://fakeimg.pl/400x250/">
-    <img class="pro product02" src="https://fakeimg.pl/400x250/">
-    <img class="pro product03" src="https://fakeimg.pl/400x250/">
+    <img class="pro product01" src="https://fakeimg.pl/400x250/"> <!-- offset:滾動到1200,400px觸發zoom-in動畫-->
+    <img class="pro product02" src="https://fakeimg.pl/400x250/"> <!-- mirror:是否超出範圍時做移出的效果-->
+    <img class="pro product03" src="https://fakeimg.pl/400x250/"> <!-- delay:延遲時間為0 -->
 </div>
+
  <div class="footer">
+
+    <div class="footer01">
+        <h1>中間標題測試</h1>
+        <h2>小標題測試</h2>
+            <div class="reg1">
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+            </div>
+        <h3>小標題測試</h3>
+            <div class="reg2">
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+            </div>
+        <h4>小標題測試</h4>
+            <div class="reg3">
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+            </div>
+        <h5>小標題測試</h5>
+            <div class="reg4">
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+                <li>測試</li>
+        </div>
+    </div>
+         
      <div class="footer02">
     <hr>
-       <a class="by">© 2020 by lhu e3</a>
+       <a class="by">© 2020 lhu e3</a>
         <!-- ↓icon↓ -->
        <div class="media_icon">
         <a href="Project2.index.htm"><img class="icon01" src="iconfinder_2018_social_media_popular_app_logo_youtube_3228540.svg"></a>
@@ -89,7 +164,8 @@
  </div>
 
 
-
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     var myIndex = 0;/*宣告變數myIndex值為0*/
     carousel();
@@ -107,11 +183,16 @@
     }
 </script>
 <script>
-        AOS.init({
+        AOS.init(
+            {
             easing: 'fade-up',
-            duration: 2500/*轉場時間長度*/
-        });
+            duration: 2500,/*持續時間長度*/
+            offset:100, /*原始觸發點的偏移量(px為單位)*/
+            mirror:true,/*滾動到*/
+            once:false,/*是否動畫只發生一次*/
+            anchorPlacement: 'top-bottom',/*由上到下觸發動畫*/
+        }
+    );
 </script>
-
 </body>
 </html>
