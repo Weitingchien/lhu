@@ -302,129 +302,67 @@ ul.drop-menu > li:nth-child(4) {
 
  }
 
- .footer h1{
-   position: absolute;
-   width: 100%;
-   text-align: center;
-   top:0px;
-   height: 100px;
-   line-height: 100px;
-   background-color: #343a40;
-   color: rgb(151, 149, 149);
-   font-size: 16px;
- }
 
- .footer h2{
-  position: absolute;
-  text-align: left;
-  width: 192px;
-  top:110px;
-  left:150px;
+/*footer第一個區塊*/
+.footer01{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: #343a40;
-  color: white;
-  font-size: 14px;
-}
-
-.reg1{
+  width: 100%;
+  height: 358px;
   position: absolute;
-  text-align: left;
-  width: 50px;
-  top:125px;
-  left:150px;
-  background-color: #343a40;
-  color: white;
-  list-style-type:none;
+  bottom: 0;
+  top:0;
+  left:0;
+  right: 0;
+  list-style: none;
+  margin:0 auto;
+
 }
 
-.reg1 li{
-  padding-top: 20px;
-  font-size: 2px;
-  color: rgb(168, 168, 168);
-}
-
-
-.footer h3{
- position: absolute;
- text-align: left;
- width: 192px;
- top:110px;
- left:500px;
- background-color: #343a40;
- color: white;
- font-size: 14px;
-}
-
-.reg2{
+.footer01 > H1{
   position: absolute;
-  text-align: left;
-  width: 50px;
-  top:125px;
-  left:500px;
-  background-color: #343a40;
-  color: white;
-  list-style-type:none;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  top:40px;
+  font-size: 17px;
+  color:rgb(168, 168, 168);
 }
 
-.reg2 li{
-  padding-top: 20px;
-  font-size: 2px;
-  color: rgb(168, 168, 168);
+
+.rg{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  
 }
 
-.footer h4{
-  position: absolute;
-  text-align: left;
-  width: 192px;
-  top:110px;
-  left:850px;
-  background-color: #343a40;
+.rg h2{
+  font-size: 16px;
   color: white;
-  font-size: 14px;
- }
-
- .reg3{
-  position: absolute;
-  text-align: left;
-  width: 50px;
-  top:125px;
-  left:850px;
-  background-color: #343a40;
-  color: white;
-  list-style-type:none;
 }
 
-.reg3 li{
-  padding-top: 20px;
-  font-size: 2px;
-  color: rgb(168, 168, 168);
+.rgli{
+  display: flex;
+  flex-direction: column; /*文字垂直*/
+  align-items: center;
+  justify-content: center;
+  position: absolute;/*相對於reg1*/
+  margin-top: 175px;
+  color:rgb(168, 168, 168);
 }
 
- .footer h5{
-  position: absolute;
-  text-align: left;
-  width: 192px;
-  top:110px;
-  left:1150px;
-  background-color: #343a40;
-  color: white;
-  font-size: 14px;
- }
-
- .reg4{
-  position: absolute;
-  text-align: left;
-  width: 50px;
-  top:125px;
-  left:1150px;
-  background-color: #343a40;
-  color: white;
-  list-style-type:none;
-}
-
-.reg4 li{
-  padding-top: 20px;
-  font-size: 2px;
-  color: rgb(168, 168, 168);
+.rgli li{
+  width: 153.594px;
+  margin: 0 -36.797px 0px 36.797px;
+  margin-top: 25px;
+  font-size: 12px;
+  
 }
 
 /*footer第二個區塊*/
@@ -436,7 +374,7 @@ ul.drop-menu > li:nth-child(4) {
     display:flex;
     height: 0px;
     color: rgb(168, 168, 168);
-    font-size: 2px;
+    font-size: 12px;
     margin-left:150px;
     margin-top:40px ;
     font-family: Arial, Helvetica, sans-serif;
@@ -515,6 +453,10 @@ ul.drop-menu > li:nth-child(4) {
     margin:0 auto;
     padding: 20px;
  }
+
+ .footer001{
+  display: none;
+}
 }
 @media screen and (max-width: 767px) {/*視窗<=767px*/
 
@@ -579,20 +521,66 @@ ul.drop-menu > li:nth-child(4) {
     margin: 30px auto;
  }
 
- .footer01{
-   display: none;
- }
+ .footer{
+  position: relative;
+}
+
+.footer01{
+  display: none;
+}
+
+.footer001{
+  position: absolute;
+  display: flex;
+  width: 360px;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: 0px auto;
+}
+
+.footer001 > p{
+  margin-top:-70px;
+  margin-bottom:25px;
+  color: rgb(151, 149, 149);
+  font-size: 16px;
+
+}
+
+select{
+  width:320px;
+  padding:20px 0px;
+  background-color: #343a40;
+  color: white;
+  font-size:15px;
+  border: none;
+
+}
+
+select :nth-child(2),
+select :nth-child(3),
+select :nth-child(4),
+select :nth-child(5){
+  color: rgb(151, 149, 149);
+  font-size: 14px;
+}
+
 
   .by{
     color: gray;
-    font-size: 2px;
+    font-size: 12px;
     margin:60px auto;
     margin-bottom: -60px;/*補回去*/
     width: 100px;
  }
 }   
 
-@media screen and (max-width:375px){/*手機*/
+@media screen and (max-width:375px){/*(手機) 視窗<=375px*/
+
   body{
     max-width: 375px;
   }
@@ -627,11 +615,60 @@ ul.drop-menu > li:nth-child(4) {
    margin: -30px 37.5px 0px 37.5px;
  }
 
+
  .by{
    width: 100px;
-   height: 0px;
-   margin: 60px 137.5px 0px 137.5px;
+   margin: 55px 137.5px 0px 137.5px;
  }
+
+ .footer{
+  position: relative;
+}
+
+.footer01{
+  display: none;
+}
+
+.footer001{
+  position: absolute;
+  display: flex;
+  width: 360px;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: 0px 7.5px 89.5px 7.5px;
+}
+
+.footer001 > p{
+  margin-top:-55px;
+  color: rgb(151, 149, 149);
+  font-size: 16px;
+  
+}
+
+select{
+  width:320px;
+  padding:10px;
+  margin-top: 10px;
+  background-color: #343a40;
+  color: white;
+  font-size:15px;
+  border: none;
+
+}
+
+
+select :nth-child(2),
+select :nth-child(3),
+select :nth-child(4),
+select :nth-child(5){
+  color: rgb(151, 149, 149);
+  font-size: 14px;
+}
 
 }
 /*↑ RWD ↑*/

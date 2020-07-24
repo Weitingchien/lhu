@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=”x-ua-compatible” content=”IE=edge, chrome=1">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" rel="stylesheet">
     <link href="Project2.css" rel="stylesheet" type="text/css">
@@ -110,44 +111,105 @@
  </div>
 
  <div class="content2" data-aos="zoom-in">
-    <img class="pro product01" src="https://fakeimg.pl/400x250/"> <!-- offset:滾動到1200,400px觸發zoom-in動畫-->
-    <img class="pro product02" src="https://fakeimg.pl/400x250/"> <!-- mirror:是否超出範圍時做移出的效果-->
-    <img class="pro product03" src="https://fakeimg.pl/400x250/"> <!-- delay:延遲時間為0 -->
+    <img class="pro product01" src="https://fakeimg.pl/400x250/">
+    <img class="pro product02" src="https://fakeimg.pl/400x250/"> 
+    <img class="pro product03" src="https://fakeimg.pl/400x250/"> 
 </div>
 
  <div class="footer">
+     <!-- ↓視窗<=375px的footer001↓ -->
+     <div class="footer001">
 
+         <p>大標題</p>
+
+        <select onchange="self.location.href=options[selectedIndex].value">
+            <option value="#">小標題測試01</option>
+            <option value="http://www.xmind.net/m/LeuG9L">測試</option>
+            <option value="2">測試</option>
+            <option value="3">測試</option>
+            <option value="4">測試</option>
+        </select>
+        <select onchange="self.location.href=options[selectedIndex].value">
+            <option value="#">小標題測試02</option>
+            <option value="http://www.xmind.net/m/PdLA76">測試</option>
+            <option value="2">測試</option>
+            <option value="3">測試</option>
+            <option value="4">測試</option>
+        </select>
+        <select onchange="self.location.href=options[selectedIndex].value">
+            <option value="#">小標題測試03</option>
+            <option value="http://www.xmind.net/m/zkCjex">測試</option>
+            <option value="2">測試</option>
+            <option value="3">測試</option>
+            <option value="4">測試</option>
+        </select>
+        <select onchange="self.location.href=options[selectedIndex].value">
+            <option value="#">小標題測試04</option>
+            <option value="http://www.xmind.net/m/wMYHNZ">測試</option>
+            <option value="2">測試</option>
+            <option value="3">測試</option>
+            <option value="4">測試</option>
+        </select>
+
+     </div>
+     <!--↑視窗<=375px的footer001↑ -->
+
+
+
+
+
+    <!-- ↓視窗>=768px的footer01↓ -->
     <div class="footer01">
+
         <h1>中間標題測試</h1>
-        <h2>小標題測試</h2>
-            <div class="reg1">
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
+
+            <div class="rg reg1">
+              <h2>小標題測試</h2>
+                <div class="rgli">
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                </div>
             </div>
-        <h3>小標題測試</h3>
-            <div class="reg2">
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
+            <div class="rg reg2">
+              <h2>小標題測試</h2>
+                <div class="rgli">
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                </div>
             </div>
-        <h4>小標題測試</h4>
-            <div class="reg3">
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
+            <div class="rg reg3">
+               <h2>小標題測試</h2>
+                <div class="rgli">
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                </div>
             </div>
-        <h5>小標題測試</h5>
-            <div class="reg4">
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
-                <li>測試</li>
-        </div>
+            <div class="rg reg4">
+               <h2>小標題測試</h2>
+                <div class="rgli">
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                </div>
+            </div>
+            <div class="rg reg5">
+               <h2>小標題測試</h2>
+                <div class="rgli">
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+                  <li>測試</li>
+               </div>
+            </div>
     </div>
+     <!--↑視窗>=768px的footer01↑ -->
          
      <div class="footer02">
     <hr>
@@ -193,6 +255,9 @@
             anchorPlacement: 'top-bottom',/*由上到下觸發動畫*/
         }
     );
+    
+    
 </script>
+
 </body>
 </html>
