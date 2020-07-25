@@ -202,7 +202,12 @@ ul.drop-menu{
 }
 
 ul.drop-menu li:hover {
-  background: #606060;
+  background: #4e4c4c;
+}
+
+.drop-menu li a{
+  text-decoration: none;
+  color:white;
 }
 
   ul.drop-menu li {
@@ -459,6 +464,17 @@ ul.drop-menu > li:nth-child(4) {
 }
 }
 @media screen and (max-width: 767px) {/*視窗<=767px*/
+  
+  .logo01{
+    left: 0;
+    z-index: 1;/*以免被header蓋住*/
+    margin-left: -70px;
+  }
+
+  .header{
+    
+    left:0;/*讓按鈕背景不要是空白的*/
+  }
 
   .header02{
     color: white;
@@ -468,6 +484,7 @@ ul.drop-menu > li:nth-child(4) {
     text-align: center;
     position: relative;
     left: -100%;
+  
  }
 
   .header ul{
@@ -487,9 +504,16 @@ ul.drop-menu > li:nth-child(4) {
     text-decoration: none; 
  }
 
+
+  .drop-menu02 li:hover {
+    background: #33323286;
+ }
+
   .drop-menu02 li a { 
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;/*連結底線拿掉*/
+    padding: 10px 200px;
+
  }
 
   li:hover > ul.drop-menu02 li {
@@ -498,10 +522,13 @@ ul.drop-menu > li:nth-child(4) {
 
   #menu_control:checked ~ .header02 {
     left: 0;
+    opacity: 0.9;
+    background-color: rgb(71, 71, 71);
  }
 
  .content{
   padding: 0px;
+  margin-top: -200px;/*new*/
 }
  
   .content2{
@@ -584,6 +611,16 @@ select :nth-child(5){
   body{
     max-width: 375px;
   }
+
+  .header{
+    left:0;/*讓按鈕背景不要是空白的*/
+  }
+
+  .drop-menu02 li a { 
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;/*連結底線拿掉*/
+    padding: 10px 150px;
+ }
 
  .content{
    width: 100%;
