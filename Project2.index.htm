@@ -105,7 +105,7 @@
  <!--↑視窗<=767px的menu↑ -->
 
  <div class="content" id="myDiv" data-aos="fade-up">
-     <img class="slides" src="https://picsum.photos/id/949/600/400">
+     <img class="slides" src="carousel01.png">
      <img class="slides" src="https://picsum.photos/id/972/600/400">
      <img class="slides" src="https://picsum.photos/id/946/600/400">
  </div>
@@ -235,6 +235,8 @@
     function carousel() {
         var i;
         var x = document.getElementsByClassName("slides");
+
+       
         for (i = 0; i < x.length; i++) {
            x[i].style.display = "none";  
         }
@@ -242,6 +244,8 @@
         if (myIndex > x.length) {myIndex = 1}    
         x[myIndex-1].style.display = "block";  
         setTimeout(carousel, 3000);    
+
+        
     }
 </script>
 <script>

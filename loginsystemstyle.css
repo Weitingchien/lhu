@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');/*Sans Pro*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-/*↓ css reset ↓*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  overflow-x: hidden;/*隱藏滾動(scrool)*/
+  overflow: hidden;/*隱藏滾動條*/
 }
 
 ol, ul {
@@ -53,6 +54,7 @@ table {
 	border-spacing: 0;
 }
 /*↑ css reset ↑*/
+
 
 /*↓ main ↓*/
 
@@ -156,6 +158,7 @@ to{
     text-align: center;
     position: relative;
     left: -100%;
+	
 }
 
 #menu_control:checked ~ .header {
@@ -166,11 +169,11 @@ to{
 .header > ul{
   list-style: none;
   padding: 0px;
-  margin: 0 auto;
+  margin: 7.5px auto; /*上下7.5px置中*/
   display: inline-block;
   background: #343a40;
   border-radius: 10px;
-  vertical-align: middle;/*垂直置中*/
+  vertical-align: middle; /*垂直置中*/
 }
 
 .header > ul > li{
@@ -192,6 +195,7 @@ to{
 
 ul.drop-menu{
   position: absolute;
+  z-index:1;/*不讓第二層選單被TABLE蓋住*/
   display: flex;
   top:100%;
   left: 0%;
@@ -286,128 +290,124 @@ ul.drop-menu > li:nth-child(4) {
     display: block;
  }
 /*↑ menu ↑*/
-  .content{
-    z-index:-1;
-    position: relative;
 
- }
 
- .content .slides{
-  width: 100%;
-  height: 700px;
+.heading1{/*置頂的登入*/
+    font-size:25px;
+    text-align: center;/*文字置中*/
+    padding:25px;
+    margin: 20px,auto;
+
+}
+.heading2{/*輸入框*/
+    font-size: 14px;
+    /*↓ 輸入框置中 ↓*/
+    margin:0px,auto;
+    padding:10px;
+    
+}
+.boxregion1{/*帳號至登入按鈕的區塊*/
+    text-align: center;
+    height: 286px;
 
 }
 
-  .footer{
-    background-color: #343a40;
-    color: aliceblue;
-    width: 100%;
-    padding-top:350px;
-    bottom: 0;
-    position: relative;
-
- }
-
-
-/*footer第一個區塊*/
-.footer01{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #343a40;
-  width: 100%;
-  height: 358px;
-  position: absolute;
-  bottom: 0;
-  top:0;
-  left:0;
-  right: 0;
-  list-style: none;
-  margin:0 auto;
+.acc > p{/*帳號與密碼輸入框區塊*/
+  padding: 10px;
 
 }
 
-.footer01 > H1{
-  position: absolute;
-  width: 200px;
-  text-align: center;
-  margin: 0 auto;
-  top:40px;
-  font-size: 17px;
-  color:rgb(168, 168, 168);
+.rememberme{/*記住我的帳號密碼*/
+    margin-top: 5px;
+    margin-left: auto;
+	margin-right:auto;
+    margin-bottom: 10px;
+}
+input.logintextbox{/*輸入框*/
+    width:350px;
+}
+
+.loginbutton{/*登入按鈕*/
+    background-color:#343A40;
+    color: white;
+    width:350px;/*按鈕寬度*/
+	height:30px;
+    padding:20px,20px;
+    text-align: center;
+    /* 按鈕顏色轉變動畫 */
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+
+    
+}
+
+input.loginbutton:hover{/*按鈕觸碰時*/
+    background-color:#00AD5E;
+}
+
+input::placeholder{
+	font-size:14px;
+	font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+
+.center{
+    z-index: -1;
+}
+
+.center2{/*忘記密碼*/
+    margin: 20px;
+    text-align: center;
+}
+
+.center2{/*忘記密碼的文字*/
+    color: white;
+    opacity: 0.6;
+}
+
+.boxregion2{/*table區域2*/
+    box-sizing:border-box;/*不讓背景顏色超出邊框*/
+    margin:0px;
+    width:auto;
+    background-color: black;
+    opacity: .6;
+    color: white;
+	padding:10px;
+    height: 94px;
+    text-align: center;/*文字置中*/
+    /*↓ table區域2背景顏色漸層 ↓*/
+    background: -webkit-linear-gradient(left top,rgb(82, 81, 81),black);
+    background: -o-linear-gradient(bottom right,rgb(82, 81, 81),black);
+    background: -moz-linear-gradient(bottom right,rgb(82, 81, 81),black);
+    background: linear-gradient(to bottom right,rgb(82, 81, 81),black);
+}
+.boxregion2>p>a{/*沒有會員帳號、申請會員*/
+    font-size: 14px;
+    color: white;
+}
+.boxregion2>p.right{/*申請會員*/
+    padding-top: 10px;
+}
+.boxregion2>p>a:hover{
+    color:#57B847;
 }
 
 
-.rg{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 120px;
+table{
+	z-index:0;
+    background-color: white;
+    border-style: solid;/*實線*/
+    border-width: 1px;/*邊框寬度*/
+	height: auto;
+    /*↓ table置中 ↓*/
+    margin:50px auto;
+	position: relative;
+
+}
   
-}
-
-.rg h2{
-  font-size: 16px;
-  color: white;
-}
-
-.rgli{
-  display: flex;
-  flex-direction: column; /*文字垂直*/
-  align-items: center;
-  justify-content: center;
-  position: absolute;/*相對於reg1*/
-  margin-top: 175px;
-  color:rgb(168, 168, 168);
-}
-
-.rgli li{
-  width: 153.594px;
-  margin: 0 -36.797px 0px 36.797px;
-  margin-top: 25px;
-  font-size: 12px;
-  
-}
-
-/*footer第二個區塊*/
-  .footer02{
-    height: 80px;
- }
-
-  .by{
-    display:flex;
-    height: 0px;
-    color: rgb(168, 168, 168);
-    font-size: 12px;
-    margin-left:150px;
-    margin-top:40px ;
-    font-family: Arial, Helvetica, sans-serif;
- }
-
-  .media_icon{
-    max-width: 100%;
-    text-align: right;
-    margin-right: 200px;
-    margin-top: 5px; /*補個5px讓他看起來跟左邊等高*/
- }
-
-  .icon01{
-    width: 30px;/*icon縮放*/
-    margin-top: -50px;
-    margin-left: 30px;
-    padding-left: 5px;
- }
-
-
-
-  .icon01:hover{
-    opacity: 0.5;
- }
-
-
-
 /*↓ RWD ↓*/
 @media screen and (min-width:768px){/*視窗>=768px*/
 
@@ -430,39 +430,7 @@ ul.drop-menu > li:nth-child(4) {
   .header02{
     display: none;
  }
-
-  .content2{
-    display: flex;
-    margin: 50px;
-    background-color: white;
- }
-
-  .pro{
-    flex: 1;
-    margin:35px auto;
- }
-
-  .product01{
-    width: 0%;
-    margin:0 auto;
-    padding: 20px;
- }
-
-  .product02{
-    width: 0%;
-    margin:0 auto;
-    padding: 20px;
- }
-
-  .product03{
-    width: 0%;
-    margin:0 auto;
-    padding: 20px;
- }
-
- .footer001{
-  display: none;
-}
+ 
 }
 @media screen and (max-width: 767px) {/*視窗<=767px*/
   
@@ -526,84 +494,9 @@ ul.drop-menu > li:nth-child(4) {
     opacity: 0.9;
     background-color: rgb(71, 71, 71);
  }
-
- .content{
-  padding: 0px;
-  margin-top: -200px;/*new*/
-}
- 
-  .content2{
-    margin:0 auto;
-    padding:20px 0px;
-    text-align: center;
-    background-color: gray;
- }
-  .content2 .pro{
-    padding: 0px;
-
- }
-
-  .media_icon{
-    width: 300px;
-    display: flex;
-    margin: 30px auto;
- }
-
- .footer{
-  position: relative;
-}
-
-.footer01{
-  display: none;
-}
-
-.footer001{
-  position: absolute;
-  display: flex;
-  width: 360px;
-  align-items: center; 
-  justify-content: center;
-  flex-direction: column;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin: 0px auto;
-}
-
-.footer001 > p{
-  margin-top:-70px;
-  margin-bottom:25px;
-  color: rgb(151, 149, 149);
-  font-size: 16px;
-
-}
-
-select{
-  width:320px;
-  padding:20px 0px;
-  background-color: #343a40;
-  color: white;
-  font-size:15px;
-  border: none;
-
-}
-
-select :nth-child(2),
-select :nth-child(3),
-select :nth-child(4),
-select :nth-child(5){
-  color: rgb(151, 149, 149);
-  font-size: 14px;
-}
-
-
-  .by{
-    color: gray;
-    font-size: 12px;
-    margin:60px auto;
-    margin-bottom: -60px;/*補回去*/
-    width: 100px;
+ table{
+	 z-index:-1;
+	 top:-200px;
  }
 }   
 
@@ -622,91 +515,15 @@ select :nth-child(5){
     text-decoration: none;/*連結底線拿掉*/
     padding: 10px 150px;
  }
-
- .content{
-   width: 100%;
+ table{
+	z-index:-1;
+    background-color: white;
+    border-style: solid;/*實線*/
+    border-width: 1px;/*邊框寬度*/
+    /*↓ table置中 ↓*/
+    margin:-50px auto;
+	height: auto;
+	position: relative
  }
-
- .content .slides{
-  width: 100%;
-
-}
-
- .content2{
-   width: 100%;
- }
-
- .pro{
-   width: 100%;
- }
-
- .footer{
-   text-align: center;
- }
-
- .footer02{
-   height: 80px;
- }
-
- .media_icon{
-   width: 300px;
-   margin: -30px 37.5px 0px 37.5px;
- }
-
- 
- .by{
-   width: 100px;
-   margin: 55px 137.5px 0px 137.5px;
- }
-
- .footer{
-  position: relative;
-}
-
-.footer01{
-  display: none;
-}
-
-.footer001{
-  position: absolute;
-  display: flex;
-  width: 360px;
-  align-items: center; 
-  justify-content: center;
-  flex-direction: column;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin: 0px 7.5px 89.5px 7.5px;
-}
-
-.footer001 > p{
-  margin-top:-55px;
-  color: rgb(151, 149, 149);
-  font-size: 16px;
-  
-}
-
-select{
-  width:320px;
-  padding:10px;
-  margin-top: 10px;
-  background-color: #343a40;
-  color: white;
-  font-size:15px;
-  border: none;
-
-}
-
-
-select :nth-child(2),
-select :nth-child(3),
-select :nth-child(4),
-select :nth-child(5){
-  color: rgb(151, 149, 149);
-  font-size: 14px;
-}
-
 }
 /*↑ RWD ↑*/
